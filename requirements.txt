@@ -1,0 +1,18 @@
+# Editable install with no version control (ariel-mongo-pyramid==0.0.0)
+Chameleon==3.6.2
+hupper==1.8.1
+mongoengine==0.18.2
+PasteDeploy==2.0.1
+plaster==1.0
+plaster-pastedeploy==0.7
+pymongo==3.8.0
+pyramid==1.10.4
+pyramid-chameleon==0.3
+pyramid-mongoengine==0.0.9
+six==1.12.0
+translationstring==1.3
+venusian==1.2.0
+waitress==1.3.0
+WebOb==1.8.5
+zope.deprecation==4.4.0
+zope.interface==4.6.0

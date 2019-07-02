@@ -1,0 +1,65 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+input.button {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  /* margin: 0 0.2em 0.2em 0; */
+  border-radius: 2em;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: FontAwesome, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+}
+input.button:hover {
+  background-color: #4095c6;
+}
+
+table {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #ffffff;
+  text-align: center;
+  min-width: 20%;
+  border-collapse: collapse;
+}
+table th {
+  background: #c6dbee;
+}
+table td,
+table th {
+  border: 1px solid #ffffff;
+  padding: 6px 10px;
+}
+table tbody td {
+  font-size: 16px;
+}
+table tr:nth-child(even) {
+  background: #d0e4f5;
+}
+table tr:nth-child(odd) {
+  background: #eeeeee;
+}
+table thead {
+  background: #0b6fa4;
+  border-bottom: 5px solid #ffffff;
+}
+table thead th {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-left: 2px solid #ffffff;
+}
+table thead th:first-child {
+  border-left: none;
+}
+table td.votes {
+  width: 65px;
+  padding-right: 15px;
+  text-align: right;
+}

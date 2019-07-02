@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Theme Scores</title>
+    <link rel="stylesheet" href="${request.static_url('ariel_mongo_pyramid:static/css/app.css') }"/>
+</head>
+<body>
+<p>Go to the <a href="${request.route_url('homepage')}">home page</a>.</p>
+
+<div tal:condition="themes | None">
+    <p>These are the scores:</p>
+    <ul>
+        <li tal:repeat="theme themes" tal:content="'Theme: ' + theme.name + '  -  Score: ' + str(theme.score)"> </li>
+    </ul>
+</div>
+
+<div tal:condition="themes | None">
+    <p>These are the scores:</p>
+    <table border="1">
+    <tr>
+        <th>Theme</th> 
+        <th>Score</th>
+    </tr>
+    <tr tal:repeat="theme themes">
+        <td tal:content="theme.name"> </td>
+        <td tal:content="str(theme.score)"></td>
+    </tr>
+    </table>
+</div>
+<div tal:condition="not themes | None">
+    <p>No videos created</p>
+</div>
+
+</body>
+</html>

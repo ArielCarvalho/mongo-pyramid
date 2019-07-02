@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Videos Homepage</title>
+    <link rel="stylesheet" href="${request.static_url('ariel_mongo_pyramid:static/css/app.css') }"/>
+</head>
+<body>
+<p>Go to the <a href="${request.route_url('theme_score')}">theme score page</a>.</p>
+<label> Create a new Video:
+    <br /><br />
+    
+    <form method="POST"
+        action="${request.current_route_url()}">
+        <label>Video name: <input name="name"/></label>
+        <label>Video theme: <input name="theme"/></label>
+        <input type="submit" name="form.create" value="Save"/>
+        <span tal:condition="message | None" tal:content="message"></span>
+    </form>
+</label>
+
+<br /><br />
+
+<div tal:condition="videos | None">
+    <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Theme</th> 
+        <th colspan="2">votes</th>
+    </tr>
+    <tr tal:repeat="video videos">
+        <td tal:content="video.name">1</td>
+        <td tal:content="video.theme">Widget</td>
+        <td class="votes">
+            <form method="POST">
+                <input name="_id" tal:attributes="value video._id" hidden="yes" />
+                <label tal:content="video.thumbs_up"> </label>
+                <input type="submit" name="thumbs_up" class="button fa-input" value="&#xf164;"/>                
+            </form>
+        </td>
+        <td class="votes">
+            <form method="POST">
+                <input name="_id" tal:attributes="value video._id" hidden="yes" />
+                <label tal:content="video.thumbs_down"> </label>
+                <input type="submit" name="thumbs_down" class="button fa-input" value="&#xf165;"/>                
+            </form>
+        </td>
+    </tr>
+    </table>
+</div>
+
+</body>
+</html>

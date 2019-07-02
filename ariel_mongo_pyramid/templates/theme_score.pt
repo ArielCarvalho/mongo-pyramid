@@ -9,13 +9,6 @@
 
 <div tal:condition="themes | None">
     <p>These are the scores:</p>
-    <ul>
-        <li tal:repeat="theme themes" tal:content="'Theme: ' + theme.name + '  -  Score: ' + str(theme.score)"> </li>
-    </ul>
-</div>
-
-<div tal:condition="themes | None">
-    <p>These are the scores:</p>
     <table border="1">
     <tr>
         <th>Theme</th> 

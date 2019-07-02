@@ -1,8 +1,0 @@
-README.txt
-setup.py
-ariel_mongo_pyramid.egg-info/PKG-INFO
-ariel_mongo_pyramid.egg-info/SOURCES.txt
-ariel_mongo_pyramid.egg-info/dependency_links.txt
-ariel_mongo_pyramid.egg-info/entry_points.txt
-ariel_mongo_pyramid.egg-info/requires.txt
-ariel_mongo_pyramid.egg-info/top_level.txt
